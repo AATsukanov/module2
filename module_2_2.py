@@ -25,8 +25,15 @@ def method2(v1, v2, v3):
         equals = 2
     return equals
 
+def method2short(v1, v2, v3):
+    result = int(v1 == v2) + int(v1 == v3) + int(v2 == v3)
+    if result == 1:
+        result = 2
+    return result
+
 v1 = int(input('Введите 1-ое число: '))
 v2 = int(input('Введите 2-ое число: '))
 v3 = int(input('Введите 3-ое число: '))
 print('(method1): Количество равных чисел:', method1(v1, v2, v3))
 print('(method2): Количество равных чисел:', method2(v1, v2, v3))
+print('(method2short): Количество равных чисел:', method2short(v1, v2, v3))
